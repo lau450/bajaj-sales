@@ -1,0 +1,272 @@
+@import url('https://fonts.googleapis.com/css2?family=Murecho:wght@300;500;900&family=Nunito:wght@200;300;400;600;700&family=Open+Sans:ital,wght@0,600;0,700;1,400&family=Poppins:wght@300;500&family=Roboto:wght@300;400;500;700&display=swap');
+
+*{
+    font-family:Murecho,Poppins,'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color:#fff;
+}
+
+/*NAV*/
+header{
+    display:flex;
+    justify-content:flex-end;
+    align-items:center;
+    padding: 30px 10%;
+    position:sticky;
+    top:5%;
+    left:5%;
+    transform: translate(0%,-50%);
+}
+
+.logo{
+    cursor: pointer;
+    margin-left: 110px;
+}
+
+.menu-items ul{
+list-style: none;
+}
+
+.menu-items ul li {
+    display:inline-block;
+    padding: 0px 20px;
+}
+
+.menu-items li a {
+    transition:all 0.3s ease 0s;
+    color: #012C62;
+    text-decoration: none;
+
+}
+
+.menu-items li a:hover{
+    color:darkorange;
+}
+
+h1{
+    text-align: center;
+    color: #012C62;
+    font-size: 30px;
+    line-height:1.2;
+    font-weight: bold;
+    
+}
+
+/*GALLERY*/
+.main-container {
+display: flex;
+flex-wrap: wrap;
+justify-content:space-evenly;
+border: 0.5rem solid #012C62;
+margin-bottom:50px;
+}
+
+.gallery-image img{
+object-fit: cover;
+cursor: pointer;
+width: 100%;
+}
+
+.gallery-info h3{
+font-size: 18px;
+font-weight: bold;
+}
+
+/*ABOUT*/
+.about-container{
+    font-size:20px;    
+}
+
+.about-container img{
+   padding:30px;
+       
+}
+
+.about-container{
+    width: 100%;
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 2.5rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.left img{
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+.right > *{
+    margin-bottom: 1.1rem;
+    color: #012C62;
+}
+
+
+.right p{
+    text-align: justify;
+}
+
+.btn{
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px 25px;
+    border: 2px solid #012C62;
+    border-radius: 5px;
+    position: relative;
+    z-index: 1;
+}
+
+.btn::after{
+    content: "";
+    background: darkorange;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0%;
+    z-index: -1;
+    transition: width .5s ease;
+}
+
+.btn:hover::after{
+    width: 100%;
+}
+
+@media (max-width:768px){
+    .grid{
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/*CONTACT*/
+.container{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 20px 100px;
+}
+
+.container:after{
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	background: url("") no-repeat center;
+	background-size: cover;
+	filter: blur(50px);
+	z-index: -1;
+}
+.contact-box{
+	max-width: 850px;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	background-color: #fff;
+	box-shadow: 0px 0px 19px 5px rgba(0,0,0,0.19);
+}
+
+.left{
+	background: url("/img/rs2002.png") no-repeat ;
+	background-size: cover;
+	height: 50%;
+    object-fit: center;
+}
+
+.right{
+	padding: 25px 40px;
+}
+
+h2{
+	position: relative;
+	padding: 0 0 10px;
+	margin-bottom: 10px;
+}
+
+h2:after{
+	content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    height: 4px;
+    width: 50px;
+    border-radius: 2px;
+    background-color: #012C62;
+}
+
+.field{
+	width: 100%;
+	border: 2px solid rgba(0, 0, 0, 0);
+	outline: none;
+	background-color: rgba(230, 230, 230, 0.6);
+	padding: 0.5rem 1rem;
+	font-size: 1.1rem;
+	margin-bottom: 22px;
+	transition: .3s;
+}
+
+.field:hover{
+	background-color: rgba(0, 0, 0, 0.1);
+}
+
+textarea{
+	min-height: 150px;
+}
+
+.btn{
+	width: 90%;
+	padding: 0.5rem 1rem;
+	background-color: #012C62;
+	color: #fff;
+	font-size: 1.1rem;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	transition: .3s;
+}
+
+.btn:hover{
+    background-color: #012C62;
+}
+
+.field:focus{
+    border: 2px solid #012C62;
+    background-color: #fff;
+}
+ /* media querys */
+@media screen and (max-width: 880px){
+	.contact-box{
+		grid-template-columns: 0.9fr;
+	}
+	.left{
+		height: 200px;
+	}
+}
+
+/*SOCIAL MEDIA*/
+.share{
+    color:#012C62;
+    font-size:16px;
+    display:flex;
+    gap:1rem;
+    width:80%;
+    height:100px;
+    justify-content:flex-start;
+    align-items: center;
+    padding:3rem;
+    justify-content:center;
+    align-items:center;
+}
